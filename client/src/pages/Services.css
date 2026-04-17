@@ -1,0 +1,85 @@
+.services-hero {
+  background: linear-gradient(135deg, #e8effe 0%, #f0f7ff 100%);
+  padding: 140px 0 70px;
+  text-align: center;
+  border-bottom: 1px solid var(--gray-200);
+}
+.services-hero h1 {
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 800;
+  color: var(--gray-900);
+  margin: 12px 0 14px;
+  line-height: 1.2;
+}
+.services-hero p { color: var(--gray-500); font-size: 1.05rem; }
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.service-card { padding: 28px; }
+.service-card__icon-wrap {
+  width: 56px; height: 56px;
+  border-radius: var(--radius-md);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+}
+.service-card h3 { font-size: 1.05rem; font-weight: 800; margin-bottom: 10px; }
+.service-card p  { font-size: 0.88rem; color: var(--gray-500); line-height: 1.7; margin-bottom: 14px; }
+.service-card__features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.service-card__features li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.83rem;
+  color: var(--gray-600);
+  font-weight: 500;
+}
+.service-card__features li span { font-weight: 800; }
+
+/* Steps */
+.services-how { background: white; }
+.services-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  position: relative;
+}
+.services-step {
+  padding: 32px 24px;
+  text-align: center;
+  position: relative;
+}
+.services-step__number {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--primary);
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 3px 12px;
+  border-radius: 100px;
+}
+.services-step__icon { font-size: 2rem; display: block; margin-bottom: 12px; }
+.services-step h3 { font-size: 1rem; font-weight: 700; color: var(--gray-900); margin-bottom: 8px; }
+.services-step p  { font-size: 0.87rem; color: var(--gray-500); line-height: 1.7; }
+
+.services-cta { background: var(--primary-light); }
+.services-cta h2 { font-size: 2rem; font-weight: 800; color: var(--gray-900); margin-bottom: 10px; }
+.services-cta p  { color: var(--gray-500); font-size: 1rem; }
+
+@media (max-width: 1024px) { .services-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 768px) {
+  .services-grid  { grid-template-columns: 1fr; }
+  .services-steps { grid-template-columns: 1fr; }
+}

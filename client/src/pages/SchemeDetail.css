@@ -1,0 +1,154 @@
+.scheme-detail { padding-bottom: 80px; }
+
+.scheme-detail__breadcrumb {
+  background: var(--white);
+  border-bottom: 1px solid var(--gray-100);
+  padding: 12px 0;
+  margin-top: 68px;
+  font-size: 0.85rem;
+  color: var(--gray-500);
+}
+.scheme-detail__breadcrumb a { color: var(--primary); }
+.scheme-detail__breadcrumb a:hover { text-decoration: underline; }
+.scheme-detail__breadcrumb span { color: var(--gray-700); font-weight: 500; }
+
+.scheme-detail__body {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 24px;
+  padding-top: 32px;
+}
+
+/* Header card */
+.scheme-detail__header { overflow: hidden; }
+.scheme-detail__category-bar { height: 5px; }
+.scheme-detail__header-inner {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  padding: 24px 24px 16px;
+}
+.scheme-detail__icon {
+  width: 54px; height: 54px;
+  border-radius: var(--radius-md);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+.scheme-detail__title {
+  font-size: clamp(1.3rem, 2.5vw, 1.7rem);
+  font-weight: 800;
+  color: var(--gray-900);
+  margin: 8px 0 4px;
+  line-height: 1.25;
+}
+.scheme-detail__ministry { font-size: 0.88rem; color: var(--gray-500); }
+
+.scheme-detail__targets {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-top: 1px solid var(--gray-100);
+  flex-wrap: wrap;
+}
+.scheme-detail__targets-label { font-size: 0.82rem; color: var(--gray-500); font-weight: 600; }
+
+.scheme-detail__tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  padding: 10px 24px 16px;
+}
+.scheme-detail__tag {
+  font-size: 0.78rem;
+  color: var(--gray-400);
+  background: var(--gray-100);
+  padding: 2px 10px;
+  border-radius: 100px;
+}
+
+/* Sections */
+.scheme-detail__sections { display: flex; flex-direction: column; gap: 16px; margin-top: 16px; }
+.scheme-detail__section { padding: 24px; }
+.scheme-detail__section h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: 12px;
+}
+.scheme-detail__section p {
+  font-size: 0.95rem;
+  color: var(--gray-600);
+  line-height: 1.75;
+}
+
+/* Sidebar */
+.scheme-detail__sidebar { display: flex; flex-direction: column; gap: 16px; }
+
+.scheme-detail__apply { padding: 24px; }
+.scheme-detail__apply h3 { font-size: 1.1rem; font-weight: 700; color: var(--gray-900); margin-bottom: 8px; }
+.scheme-detail__apply p  { font-size: 0.88rem; color: var(--gray-500); margin-bottom: 16px; }
+.scheme-detail__views {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--gray-400);
+  margin-top: 12px;
+}
+
+.scheme-detail__ai-card {
+  padding: 24px;
+  text-align: center;
+  background: linear-gradient(135deg, #f0f4ff, #e0f2fe);
+  border-color: var(--primary-light);
+}
+.scheme-detail__ai-icon { font-size: 2rem; display: block; margin-bottom: 10px; }
+.scheme-detail__ai-card h3 { font-size: 0.95rem; font-weight: 700; color: var(--gray-900); margin-bottom: 6px; }
+.scheme-detail__ai-card p  { font-size: 0.85rem; color: var(--gray-500); margin-bottom: 14px; }
+
+.scheme-detail__related h3 {
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--gray-500);
+  margin-bottom: 12px;
+}
+.scheme-detail__related-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  margin-bottom: 8px;
+  text-decoration: none;
+}
+.scheme-detail__related-icon {
+  width: 36px; height: 36px;
+  border-radius: var(--radius-sm);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+.scheme-detail__related-title { font-size: 0.88rem; font-weight: 600; color: var(--gray-800); }
+.scheme-detail__related-cat   { font-size: 0.78rem; color: var(--gray-400); margin-top: 2px; }
+
+.scheme-detail__error {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  text-align: center;
+  padding-top: 68px;
+}
+.scheme-detail__error span { font-size: 3rem; }
+.scheme-detail__error h2 { font-size: 1.4rem; color: var(--gray-700); }
+
+@media (max-width: 900px) {
+  .scheme-detail__body { grid-template-columns: 1fr; }
+  .scheme-detail__sidebar { order: -1; }
+}
